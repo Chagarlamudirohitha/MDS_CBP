@@ -1,0 +1,74 @@
+# Byte-compiled / optimized / cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+
+# Jupyter Notebook checkpoints and outputs
+.ipynb_checkpoints
+.ipynb
+# (Optional) ignore generated notebook outputs if you don't want to version notebooks' output cells:
+# *.nbconvert.ipynb
+
+# Data (ignore raw/large datasets stored in data/; remove if you track small CSVs)
+data/
+*.csv
+*.xlsx
+
+# Model artifacts and serialized objects
+*.joblib
+*.pkl
+*.h5
+model_*.joblib
+scaler.joblib
+model_rf.joblib
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+# Unit test / coverage output
+htmlcov/
+.coverage
+pytest_cache/
+
+# Logs and runtime files
+*.log
+logs/
+*.pid
+
+# Environment / secrets
+.env
+.env.local
+.env.*.local
+secrets.yml
+credentials.json
+
+# IDE/editor settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.vs/
+*.vscode
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Optional: notebook checkpoints produced by some tools
+.ipynb_checkpoints/
+
+# Optional: large binary files (if you have any)
+*.zip
+*.tar.gz
+*.tgz
