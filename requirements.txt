@@ -1,0 +1,17 @@
+pandas
+numpy
+matplotlib
+seaborn
+imbalanced-learn  # for SMOTE
+scikit-learn      # for all sklearn imports
+xgboost
+joblib
+streamlit        # for web application
+plotly           # for interactive visualizations in streamlit
+streamlit-option-menu  # for navigation menu
+fpdf2            # for creating PDF reports
+reportlab        # for advanced PDF generation
+pillow           # for image handling
+pdfkit           # for converting HTML to PDF
+base64           # for encoding/decoding (built-in)
+weasyprint       # for HTML to PDF conversion with CSS support
