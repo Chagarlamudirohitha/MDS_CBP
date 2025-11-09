@@ -22,10 +22,9 @@ data/
 *.xlsx
 
 # Model artifacts and serialized objects
-*.joblib
 *.pkl
 *.h5
-model_*.joblib
+
 
 
 # Distribution / packaging
