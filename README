@@ -1,0 +1,64 @@
+# 🩺 Diabetes Prediction App
+
+AI tool to check diabetes risk + health calculators + PDF reports
+
+## 📋 Setup Steps
+
+### Step 1: Train the Model (First Time Only)
+```bash
+pip install -r requirements.txt
+```
+
+Open and run `code.ipynb` (or your notebook name) to generate:
+- `model_rf.joblib`
+- `scaler.joblib`
+
+### Step 2: Run the App
+```bash
+streamlit run app.py
+```
+
+Open browser: `http://localhost:8501`
+
+## 📁 Project Files
+```
+├── app.py                    # Main app
+├── code.ipynb      # Train model (run this first!)
+├── requirements.txt          # All packages
+├── model_rf.joblib          # Generated after training
+└── scaler.joblib            # Generated after training
+```
+
+## How to Use
+
+1. **Calculators** → Calculate BMI & family risk
+2. **Predict** → Enter health data
+3. **Download** → Get PDF report
+
+## Features
+
+✅ Diabetes risk prediction  
+✅ BMI calculator  
+✅ Family history estimator  
+✅ PDF health reports  
+✅ Health tips & info  
+
+## Dataset
+
+Model trained on: [(https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database)]
+
+
+
+## ⚠️ Important Notes
+
+- Run the `.ipynb` notebook **first** to create model files
+- The `.joblib` files are **required** for the app to work
+- This is a **screening tool**, not a diagnosis
+
+## Made With
+
+Python • Streamlit • Machine Learning • Jupyter
+
+---
+
+⭐ Star if helpful!
