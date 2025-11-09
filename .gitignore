@@ -26,8 +26,7 @@ data/
 *.pkl
 *.h5
 model_*.joblib
-scaler.joblib
-model_rf.joblib
+
 
 # Distribution / packaging
 build/
