@@ -1,6 +1,9 @@
 # 🩺 Diabetes Prediction App
 
-AI tool to check diabetes risk + health calculators + PDF reports
+An intelligent web app built with **Streamlit** that predicts **diabetes risk**, includes **BMI** and **family history calculators**, and generates **personalized PDF health reports**.
+## 🚀 Live Project
+
+🔗 **Access the deployed app here:** 👉 [Click to Open](YOUR_DEPLOYMENT_LINK_HERE)
 
 ## 📋 Setup Steps
 
