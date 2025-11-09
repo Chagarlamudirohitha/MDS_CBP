@@ -3,7 +3,7 @@
 An intelligent web app built with **Streamlit** that predicts **diabetes risk**, includes **BMI** and **family history calculators**, and generates **personalized PDF health reports**.
 ## 🚀 Live Project
 
-🔗 **Access the deployed app here:** 👉 [Click to Open](YOUR_DEPLOYMENT_LINK_HERE)
+🔗 **Access the deployed app here:** 👉 [Click to Open](https://diabetespredictor-hmrrv.streamlit.app/)
 
 ## 📋 Setup Steps
 
