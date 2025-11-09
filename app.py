@@ -59,15 +59,15 @@ if selected == "Predict":
 
     col1, col2 = st.columns(2)
     with col1:
-        pregnancies = st.number_input("Pregnancies", 0.0, 20.0, 1.0)
-        glucose = st.number_input("Glucose (mg/dL)", 0.0, 300.0, 100.0)
-        blood_pressure = st.number_input("Blood Pressure (mmHg)", 0.0, 200.0, 72.0)
-        skin_thickness = st.number_input("Skin Thickness (mm)", 0.0, 100.0, 20.0)
+        pregnancies = st.number_input("Pregnancies", min_value=0, max_value=20, value=1, step=1)
+        glucose = st.number_input("Glucose (mg/dL)", min_value=0.0, max_value=300.0, value=100.0, step=1.0)
+        blood_pressure = st.number_input("Blood Pressure (mmHg)", min_value=0.0, max_value=200.0, value=72.0, step=1.0)
+        skin_thickness = st.number_input("Skin Thickness (mm)", min_value=0.0, max_value=100.0, value=20.0, step=1.0)
     with col2:
-        insulin = st.number_input("Insulin (µU/mL)", 0.0, 900.0, 80.0)
-        bmi = st.number_input("BMI", 0.0, 70.0, 25.0)
-        dpf = st.number_input("Diabetes Pedigree Function", 0.0, 3.0, 0.3)
-        age = st.number_input("Age (Years)", 1, 120, 30)
+        insulin = st.number_input("Insulin (µU/mL)", min_value=0.0, max_value=900.0, value=80.0, step=1.0)
+        bmi = st.number_input("BMI", min_value=0.0, max_value=70.0, value=25.0, step=0.1)
+        dpf = st.number_input("Diabetes Pedigree Function", min_value=0.0, max_value=3.0, value=0.3, step=0.01)
+        age = st.number_input("Age (Years)", min_value=1, max_value=120, value=30, step=1)
 
     if st.button("🔍 Predict"):
         input_data = scaler.transform([[pregnancies, glucose, blood_pressure, skin_thickness, insulin, bmi, dpf, age]])
@@ -121,19 +121,79 @@ if selected == "Predict":
 
 # -------------------- Info Page --------------------
 if selected == "Info":
-    st.subheader("ℹ️ Feature Information")
+    st.subheader("ℹ️ Feature Information & Ranges")
+    
     st.markdown("""
-| Feature | Meaning |
-|------|---------------------------|
-| Pregnancies | Number of pregnancies |
-| Glucose | Blood sugar level |
-| Blood Pressure | Diastolic BP |
-| Skin Thickness | Body fat thickness |
-| Insulin | Insulin in blood |
-| BMI | Body Mass Index |
-| DPF | Family diabetes factor |
-| Age | Age in years |
-""")
+    ### 🤰 **Pregnancies** (Integer)
+    - **What it means:** Total number of times you've been pregnant
+    - **Typical Range:** 0-15 pregnancies (most women have 0-5)
+    - **Note:** Higher pregnancies can increase diabetes risk due to gestational diabetes history
+    
+    ---
+    
+    ### 🩸 **Glucose** (mg/dL)
+    - **What it means:** Amount of sugar in your blood (plasma glucose concentration)
+    - **Normal (Fasting):** 70-99 mg/dL
+    - **Pre-diabetic:** 100-125 mg/dL
+    - **Diabetic:** 126+ mg/dL
+    - **After eating:** Can go up to 140-180 mg/dL normally
+    - **Note:** This is the most important diabetes indicator
+    
+    ---
+    
+    ### 💓 **Blood Pressure** (mmHg)
+    - **What it means:** Diastolic blood pressure (the lower number in BP reading like 120/80)
+    - **Normal:** 60-80 mmHg
+    - **Elevated:** 80-89 mmHg
+    - **High:** 90+ mmHg
+    - **Note:** People with diabetes often have high blood pressure too
+    
+    ---
+    
+    ### 📏 **Skin Thickness** (mm)
+    - **What it means:** Triceps skin fold thickness, which measures body fat percentage
+    - **Typical Range:** 10-50 mm
+    - **Average for women:** 20-30 mm
+    - **Note:** Used to estimate body fat, higher values suggest obesity
+    
+    ---
+    
+    ### 💉 **Insulin** (µU/mL)
+    - **What it means:** Serum insulin level - the hormone that controls blood sugar
+    - **Normal (Fasting):** 2.6-24.9 µU/mL
+    - **Normal (After eating):** 16-166 µU/mL
+    - **Note:** Diabetics may have very high or very low insulin levels
+    
+    ---
+    
+    ### ⚖️ **BMI (Body Mass Index)**
+    - **What it means:** Body Mass Index - your weight relative to your height
+    - **Formula:** Weight (kg) ÷ [Height (m)]²
+    - **Underweight:** Below 18.5
+    - **Normal weight:** 18.5-24.9
+    - **Overweight:** 25.0-29.9
+    - **Obese:** 30.0-39.9
+    - **Severely obese:** 40+
+    - **Note:** Higher BMI greatly increases diabetes risk
+    
+    ---
+    
+    ### 🧬 **Diabetes Pedigree Function (DPF)**
+    - **What it means:** A score showing your genetic risk based on family diabetes history
+    - **Typical Range:** 0.08-2.5
+    - **Low risk:** 0.08-0.5 (little family history)
+    - **Medium risk:** 0.5-1.0
+    - **High risk:** 1.0+ (strong family history)
+    - **Note:** Calculated from age of relatives when diagnosed and relationship to you
+    
+    ---
+    
+    ### 👶👴 **Age** (Years)
+    - **What it means:** Your current age
+    - **Common Range:** 1-120 years
+    - **Higher Risk:** Age 45 and above
+    - **Note:** Risk of Type 2 diabetes increases significantly after age 45
+    """)
 
 # -------------------- Tips Page --------------------
 if selected == "Tips":
