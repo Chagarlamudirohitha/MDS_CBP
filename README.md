@@ -21,7 +21,7 @@ Open and run `code.ipynb` (or your notebook name) to generate:
 streamlit run app.py
 ```
 
-Open browser: `http://localhost:8501`
+
 
 ## 📁 Project Files
 ```
@@ -57,6 +57,12 @@ Model trained on: [(https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-
 - Run the `.ipynb` notebook **first** to create model files
 - The `.joblib` files are **required** for the app to work
 - This is a **screening tool**, not a diagnosis
+
+## Acknowledgment
+
+This project adapts code from [https://github.com/viochris/Diabetes-prediction-project.git]
+(Diabetes-prediction-project by viochris,licensed under the MIT License.)
+Special thanks to the original author for their open-source contribution. 🙌
 
 ## Made With
 
